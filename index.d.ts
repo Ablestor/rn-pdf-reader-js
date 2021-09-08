@@ -1,5 +1,6 @@
 declare module 'rn-pdf-reader-js' {
   import { Component } from "react";
+  import { WebViewProps } from 'react-native-webview';
   import { StyleProp, ViewStyle, NavState } from 'react-native';
 
   interface ISource {
@@ -8,7 +9,7 @@ declare module 'rn-pdf-reader-js' {
     headers?: { [key: string]: string };
   }
 
-  interface IProps {
+  interface IProps extends WebViewProps {
     source: ISource,
     style?: StyleProp<ViewStyle>,
     webviewStyle?: StyleProp<ViewStyle>,
