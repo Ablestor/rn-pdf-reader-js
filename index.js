@@ -203,7 +203,7 @@ class PdfReader extends Component<Props, State> {
             onError={onError}
             originWhitelist={["http://*", "https://*", "file://*", "data:*"]}
             style={[styles.webview, webviewStyle]}
-            source={{ uri: data }}
+            source={{ uri: data, headers: props.source.headers }}
           />
         </View>
       );
